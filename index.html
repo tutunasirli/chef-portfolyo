@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="pNVr9TTG6yQNkGHPthmY8UgW8xQic4w6bQbPZttJZrM" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chef Emirhan Çağrı Sarıkaya — Ana Sayfa</title>
+
+<title>Emirhan Çağrı Sarıkaya | Şef Portfolyosu</title>
+<meta name="description" content="Mutfak yolculuğu, tarzı ve felsefesiyle şef portfolyosu. Tabaklar, deneyim ve iletişim bilgileri.">
+<link rel="canonical" href="https://SITE-ADRESI/">
+<meta name="theme-color" content="#1a1a18">
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn önizlemesi) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Emirhan Çağrı Sarıkaya">
+<meta property="og:title" content="Emirhan Çağrı Sarıkaya | Şef Portfolyosu">
+<meta property="og:description" content="Mutfak yolculuğu, tarzı ve felsefesiyle şef portfolyosu.">
+<meta property="og:url" content="https://SITE-ADRESI/">
+<meta property="og:image" content="https://SITE-ADRESI/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Şefin hazırladığı bir tabak">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="description" content="Emirhan Çağrı Sarıkaya — Nevşehir'de Kapadokya mutfağı ve modern Türk kahvaltısı üzerine çalışan şef.">
+<meta property="og:title" content="Chef Emirhan Çağrı Sarıkaya">
+<meta property="og:description" content="Kapadokya'dan modern Türk mutfağı. Portfolyo ve iletişim.">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1a18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    position: relative; overflow: hidden;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 8rem 4rem 5rem 6rem; position: relative; z-index: 2;
+  }
+  .hero-tag {
+    font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 6.5vw, 6.5rem);
+    font-weight: 300; line-height: 1.02; margin-bottom: 1.5rem;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(1.3rem, 2vw, 1.7rem); line-height: 1.4;
+    color: var(--gold-light); max-width: 460px; margin-bottom: 1.2rem;
+  }
+  .hero-sub {
+    font-size: 0.8rem; letter-spacing: 0.08em; line-height: 1.9;
+    color: var(--muted); max-width: 420px; margin-bottom: 3rem;
+  }
+  .hero-actions { display: flex; gap: 1rem 1.2rem; flex-wrap: wrap; align-items: center; }
+
+ 
+  .hero-cv-link {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none; padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(184,150,74,0.35);
+    transition: color 0.3s, border-color 0.3s, gap 0.3s;
+  }
+  .hero-cv-link svg { width: 15px; height: 15px; transition: transform 0.3s; }
+  .hero-cv-link:hover, .hero-cv-link:focus-visible { color: var(--gold-light); border-color: var(--gold-light); }
+  .hero-cv-link:hover svg { transform: translateY(2px); }
+
+  .hero-right { position: relative; overflow: hidden; }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #2a2318 0%, #1a1a18 45%, #0e0e0c 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-frame {
+    width: 360px; height: 480px;
+    border: 1px solid rgba(184,150,74,0.28);
+    position: relative; display: flex; align-items: center; justify-content: center;
+  }
+  .hero-frame::before {
+    content: ''; position: absolute; inset: 14px;
+    border: 1px solid rgba(184,150,74,0.1);
+  }
+  .hero-frame-content {
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  }
+  .hero-watermark {
+    position: absolute; right: -1.5rem; bottom: 5rem;
+    font-family: 'Cormorant Garamond', serif; font-size: 6.5rem; font-style: italic;
+    color: rgba(184,150,74,0.05); line-height: 1;
+    pointer-events: none; writing-mode: vertical-rl;
+  }
+
+  /* ── 4 KART: masaüstünde 2x2, uzun metinler rahat okunsun ── */
+  .intro-strip-desc { max-width: 420px; font-size: 0.82rem; }
+  @media (min-width: 901px) {
+    .intro-strip-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 8rem 1.5rem 3rem; }
+    .hero-right { height: auto; min-height: 580px; }
+    .hero-frame {
+      width: min(360px, 80vw);
+      height: calc(min(360px, 80vw) * 4 / 3);
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
+<nav id="site-nav" aria-label="Ana menü"></nav>
+
+<!-- HERO -->
+<section class="hero" id="icerik">
+  <div class="hero-left">
+    <div class="hero-tag fade-up delay-1">Executive Chef · Kapadokya</div>
+    <h1 class="hero-title fade-up delay-2">
+      Emirhan Çağrı<br><em>Sarıkaya</em>
+    </h1>
+    <p class="hero-tagline fade-up delay-3">
+      Yerel lezzetlerden modern dokunuşlara uzanan bir mutfak yolculuğu.
+    </p>
+    <p class="hero-sub fade-up delay-3">
+      Mutfağı yalnızca yemek hazırlanan bir yer değil; emeğin, yaratıcılığın ve lezzetin
+      buluştuğu bir alan olarak görüyorum. Her tabakta kaliteli malzemeyi, doğru tekniği
+      ve lezzeti bir araya getirmeyi hedefliyorum.
+    </p>
+    <div class="hero-actions fade-up delay-4">
+      <a href="galeri.html" class="btn btn-outline">Çalışmalarımı Gör →</a>
+      
+      <a href="Emirhan-Cagri-Sarikaya-CV.pdf" class="hero-cv-link" download="Emirhan-Cagri-Sarikaya-CV.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="M7 11l5 5 5-5"></path><path d="M5 21h14"></path></svg>
+        <span>CV İndir</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-bg">
+      <div class="hero-frame">
+        <div class="hero-frame-content">
+          <img src="images/chef.webp" alt="Şef Emirhan Çağrı Sarıkaya, siyah şef ceketiyle portre" class="hero-chef-img" width="360" height="480" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+    <div class="hero-watermark">Gastronomi</div>
+  </div>
+</section>
+
+<!-- MUTFAK ANLAYIŞIM ŞERİDİ -->
+<section class="intro-strip">
+  <div class="container">
+    <div class="intro-strip-grid">
+
+      <div class="intro-strip-item reveal">
+        <div class="intro-strip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+        </div>
+        <h2 class="intro-strip-title">Mutfağa Yolculuğum</h2>
+        <p class="intro-strip-desc">Turizm alanına duyduğum ilgiyle başlayan yolculuğum, zamanla mutfağa ve yemek yapmaya olan tutkuma dönüştü. Aşçılığı, kendimi sürekli geliştirebileceğim ve yaratıcılığımı ortaya koyabileceğim bir meslek olarak seçtim.</p>
+      </div>
+
+      <div class="intro-strip-item reveal">
+        <div class="intro-strip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+        </div>
+        <h2 class="intro-strip-title">Mutfak Tarzım</h2>
+        <p class="intro-strip-desc">Türk mutfağının köklü lezzetlerine, Kapadokya'nın yerel ürünlerine ve kahvaltı kültürüne ilgi duyuyorum. Geleneksel tatları modern tekniklerle buluşturarak sade, dengeli ve lezzet odaklı tabaklar hazırlamayı seviyorum.</p>
+      </div>
+
+      <div class="intro-strip-item reveal">
+        <div class="intro-strip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </div>
+        <h2 class="intro-strip-title">Malzemeye Bakışım</h2>
+        <p class="intro-strip-desc">Mevsiminde, taze ve kaliteli malzemelerle çalışmayı önemsiyorum. Yerel ürünlerin karakterini koruyarak onları doğru tekniklerle değerlendirmeyi ve malzemenin kendi lezzetini ön plana çıkarmayı tercih ediyorum.</p>
+      </div>
+
+      <div class="intro-strip-item reveal">
+        <div class="intro-strip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <h2 class="intro-strip-title">Mutfak Felsefem</h2>
+        <p class="intro-strip-desc">Benim için mutfağın temelinde temizlik, ekip uyumu ve lezzet var. İyi bir yemeğin yalnızca doğru tarifle değil, özenli çalışma ve güçlü bir ekip anlayışıyla ortaya çıktığına inanıyorum.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

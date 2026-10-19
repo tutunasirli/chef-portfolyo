@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chef Emirhan Çağrı Sarıkaya — İletişim</title>
+<meta name="description" content="Chef Emirhan Çağrı Sarıkaya ile iletişime geçin: özel menü çalışmaları, iş birlikleri ve profesyonel mutfak teklifleri için.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:title" content="Chef Emirhan Çağrı Sarıkaya — İletişim">
+<meta property="og:description" content="Özel menü çalışmaları ve iş birlikleri için iletişime geçin.">
+<meta property="og:type" content="website">
+<!-- Yayından sonra gerçek alan adınla ekleyin:
+<meta property="og:image" content="https://SITE-ADIN.netlify.app/images/og.jpg"> -->
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1a18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .contact-section { padding: 6rem 0 8rem; background: var(--dark); }
+
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr;
+    gap: 6rem; align-items: start; margin-top: 3rem;
+  }
+
+  /* Sol — bilgiler */
+  .contact-info-block { display: flex; flex-direction: column; }
+  .info-item {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 2rem 0; border-bottom: 1px solid rgba(184,150,74,0.1);
+  }
+  .info-item:first-child { padding-top: 0; }
+  .info-icon {
+    width: 2.8rem; height: 2.8rem; flex-shrink: 0;
+    border: 1px solid rgba(184,150,74,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+  .info-label {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 0.3rem;
+  }
+  .info-value { font-size: 0.85rem; color: var(--cream); line-height: 1.5; }
+  .info-value a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(184,150,74,0.3); }
+  .info-value a:hover { color: var(--gold); }
+  .info-note { color: var(--muted); font-size: 0.85rem; }
+
+  /* Sağ — form */
+  .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-label {
+    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+  }
+  .form-input, .form-textarea {
+    background: transparent;
+    border: none; border-bottom: 1px solid rgba(184,150,74,0.25);
+    color: var(--cream); font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem; padding: 0.8rem 0; outline: none;
+    transition: border-color 0.3s; width: 100%;
+  }
+  .form-input:focus, .form-textarea:focus { border-bottom-color: var(--gold); }
+  .form-textarea { resize: none; height: 120px; }
+  .honeypot { display: none; }
+
+  .form-submit {
+    align-self: flex-start; margin-top: 0.5rem;
+    background: transparent; border: 1px solid var(--gold);
+    color: var(--gold); font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase;
+    padding: 1rem 2.5rem; cursor: pointer; transition: all 0.4s;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .form-submit:hover { background: var(--gold); color: var(--dark); }
+  .form-submit:disabled { opacity: 0.6; cursor: wait; }
+  .submit-arrow { transition: transform 0.3s; }
+  .form-submit:hover .submit-arrow { transform: translateX(6px); }
+
+  /* Başarı mesajı */
+  .success-msg {
+    display: none; padding: 1.5rem 2rem;
+    border: 1px solid rgba(76,175,80,0.3);
+    background: rgba(76,175,80,0.05);
+    color: #6dbf70; font-size: 0.8rem; line-height: 1.6;
+  }
+
+  /* Hata mesajı */
+  .form-error {
+    display: none; padding: 1.5rem 2rem;
+    border: 1px solid rgba(220,80,80,0.3);
+    background: rgba(220,80,80,0.05);
+    color: #e07a7a; font-size: 0.8rem; line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
+<nav id="site-nav" aria-label="Ana menü"></nav>
+
+<div id="icerik" class="page-header">
+  <div class="container">
+    <div class="section-label fade-up delay-1">Ulaşın</div>
+    <h1 class="section-title fade-up delay-2">Birlikte <em>Çalışalım</em></h1>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Sol: İletişim bilgileri -->
+      <div class="contact-info-block reveal">
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">📍</div>
+          <div>
+            <div class="info-label">Konum</div>
+            <div class="info-value">Antalya, Türkiye<br>
+              <span class="info-note">Tüm Antalya ve çevre iller</span>
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">📞</div>
+          <div>
+            <div class="info-label">Telefon</div>
+            <div class="info-value">
+              <a href="tel:+905441370607">+90 544 137 06 07</a><br>
+              <a href="https://wa.me/905441370607" target="_blank" rel="noopener noreferrer">WhatsApp ile yaz</a>
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">✉️</div>
+          <div>
+            <div class="info-label">E-posta</div>
+            <!-- Adres, js/contact.js tarafından birleştirilir (basit botlardan korunmak için) -->
+            <div class="info-value">
+              <a href="mailto:cagrii0758@gmail.com">cagrii0758@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">📸</div>
+          <div>
+            <div class="info-label">Sosyal Medya</div>
+            <div class="info-value"><a href="https://instagram.com/cagris07" target="_blank" rel="noopener noreferrer">@cagris07</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sağ: Form -->
+      <div class="reveal">
+        <form class="contact-form" id="contactForm" method="post" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value="099cc3e6-cfee-46a2-bcfe-a95fbfdc87b5">
+          <input type="hidden" name="subject" value="Portfolyo sitesinden yeni mesaj">
+          <input class="honeypot" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="ad">Adınız *</label>
+              <input class="form-input" id="ad" name="ad" type="text" autocomplete="given-name" maxlength="60" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="soyad">Soyadınız *</label>
+              <input class="form-input" id="soyad" name="soyad" type="text" autocomplete="family-name" maxlength="60" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">E-posta *</label>
+              <input class="form-input" id="email" name="email" type="email" autocomplete="email" maxlength="120" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tel">Telefon</label>
+              <input class="form-input" id="tel" name="telefon" type="tel" autocomplete="tel" maxlength="25">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="mesaj">Mesajınız *</label>
+            <textarea class="form-textarea" id="mesaj" name="mesaj" maxlength="2000" required placeholder="Hangi konuda çalışmak istiyorsunuz? Kısaca anlatın."></textarea>
+          </div>
+
+          <button class="form-submit" type="submit">Mesaj Gönder <span class="submit-arrow" aria-hidden="true">→</span></button>
+          <div class="success-msg" id="successMsg" role="status"></div>
+          <div class="form-error" id="errorMsg" role="alert"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

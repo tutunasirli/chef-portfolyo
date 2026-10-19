@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chef Emirhan Çağrı Sarıkaya — İletişim</title>
+<meta name="description" content="Chef Emirhan Çağrı Sarıkaya ile iletişime geçin: özel menü çalışmaları, iş birlikleri ve profesyonel mutfak teklifleri için.">
+<meta property="og:title" content="Chef Emirhan Çağrı Sarıkaya — İletişim">
+<meta property="og:description" content="Özel menü çalışmaları ve iş birlikleri için iletişime geçin.">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1a18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .profile-section { padding: 6rem 0 5rem; background: var(--dark); }
+  .profile-grid { display:grid; grid-template-columns: 0.9fr 1.1fr; gap:5rem; align-items:start; }
+  .profile-photo-box { position:sticky; top:6rem; }
+  .profile-photo { width:100%; aspect-ratio:3/4; border:1px solid rgba(184,150,74,.25); position:relative; overflow:hidden; }
+  .profile-photo::before { content:''; position:absolute; inset:12px; z-index:1; pointer-events:none; border:1px solid rgba(184,150,74,.35); }
+  .profile-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:40% 30%; }
+ 
+  .profile-body p { font-size:0.86rem; line-height:1.95; color:rgba(245,240,232,.72); margin-bottom:1.35rem; }
+  .profile-quote { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.45rem; color:var(--gold-light); line-height:1.5; border-left:2px solid var(--gold); padding-left:1.5rem; margin:2.5rem 0; }
+
+  .profile-education { list-style:none; margin:0 0 2.5rem; padding:0; border-top:1px solid rgba(184,150,74,.18); }
+  .profile-education li { display:grid; grid-template-columns:110px 1fr; gap:1.25rem; padding:1rem 0; border-bottom:1px solid rgba(184,150,74,.18); font-size:0.82rem; line-height:1.7; color:rgba(245,240,232,.72); }
+  .profile-education-year { color:var(--gold); font-size:.72rem; letter-spacing:.16em; padding-top:.15rem; }
+  .profile-education strong { display:block; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.25rem; color:var(--cream); line-height:1.2; }
+
+  .experience-section { padding:6rem 0; background:var(--dark-2); }
+  .experience-list { margin-top:3.5rem; display:flex; flex-direction:column; gap:1px; background:rgba(184,150,74,.14); }
+  .experience-card { display:grid; grid-template-columns:80px 1fr auto; gap:2rem; align-items:start; padding:2.5rem; background:var(--dark); transition:background .3s, transform .3s; }
+  .experience-card:hover { background:#161512; }
+  .experience-card.featured { border-left:3px solid var(--gold); }
+  .experience-number { font-family:'Cormorant Garamond',serif; font-size:2.6rem; color:rgba(184,150,74,.65); line-height:1; }
+  .experience-role { color:var(--gold); font-size:.75rem; letter-spacing:.22em; text-transform:uppercase; margin-bottom:.55rem; }
+  .experience-company { font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--cream); line-height:1.1; margin-bottom:.45rem; }
+  .experience-location { font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .experience-note { max-width:500px; margin-top:1.1rem; font-size:0.76rem; line-height:1.75; color:rgba(245,240,232,.62); }
+  .experience-badge { font-size:.58rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(184,150,74,.3); padding:.45rem .7rem; white-space:nowrap; }
+
+  /* REFERANSLAR */
+  .references-section { padding:6rem 0; background:var(--dark); }
+  .references-intro { max-width:620px; margin-top:1.5rem; font-size:0.86rem; line-height:1.95; color:rgba(245,240,232,.72); }
+  .references-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; margin-top:3rem; background:rgba(184,150,74,.14); }
+  .reference-card { display:flex; flex-direction:column; justify-content:space-between; gap:2rem; padding:2.5rem; background:var(--dark); }
+  .reference-quote { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.3rem; line-height:1.6; color:var(--gold-light); border-left:2px solid var(--gold); padding-left:1.25rem; }
+  .reference-name { font-family:'Cormorant Garamond',serif; font-size:1.55rem; color:var(--cream); line-height:1.15; margin-bottom:.4rem; }
+  .reference-role { color:var(--gold); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; }
+  .references-note { margin-top:2rem; font-size:0.78rem; line-height:1.8; color:var(--muted); }
+  .references-note a { color:var(--gold); text-decoration:underline; text-underline-offset:3px; }
+
+  .profile-cta { padding:5rem 0; background:var(--dark-2); text-align:center; border-top:1px solid rgba(184,150,74,.1); }
+  .profile-cta p { max-width:580px; margin:.8rem auto 2rem; color:var(--muted); font-size:.95rem; line-height:1.8; }
+
+   @media (max-width: 900px) {
+    .profile-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .profile-photo-box { position: static; }
+    .profile-photo { max-width: 620px; margin: 0 auto; }
+    .experience-card { grid-template-columns: 55px 1fr; }
+    .references-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 500px) {
+    .profile-section, .experience-section, .references-section { padding: 4.5rem 0; }
+    .experience-card { padding: 1.7rem; gap: 1rem; }
+    .experience-number { font-size: 2rem; }
+    .experience-company { font-size: 1.55rem; }
+    .reference-card { padding: 1.7rem; }
+    .profile-education li { grid-template-columns: 1fr; gap: .2rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
+<nav id="site-nav" aria-label="Ana menü"></nav>
+
+<div id="icerik" class="page-header">
+  <div class="container">
+    <div class="section-label fade-up delay-1">Profesyonel Profil</div>
+    <h1 class="section-title fade-up delay-2">Chef Emirhan Çağrı Sarıkaya</h1>
+  </div>
+</div>
+
+<section class="profile-section">
+  <div class="container">
+    <div class="profile-grid">
+      
+      <!-- FOTOĞRAF KUTUSU -->
+      <div class="profile-photo-box reveal">
+        <div class="profile-photo">
+          <img src="images/chefH.png" width="768" height="1024" loading="lazy" alt="Chef Emirhan Çağrı Sarıkaya">
+        </div>
+      </div> 
+        
+      <!-- İÇERİK KUTUSU -->
+      <div class="profile-body">
+        <div class="section-label reveal">Hakkımda</div>
+        <h2 class="section-title reveal" style="margin-bottom:1.5rem;">Mutfakta <em>Deneyim</em>, tabakta hikâye.</h2>
+        <div class="divider reveal"></div>
+        <p class="reveal">Turizm rehberliğiyle başlayan kariyer yolculuğu, mutfağa duyduğu merakla profesyonel aşçılık alanına yöneldi. Akdeniz Üniversitesi'nde edindiği kültürel birikimi, Isparta Uygulamalı Bilimler Üniversitesi Aşçılık eğitimiyle birleştirdi.</p>
+        <p class="reveal">Kapadokya'daki profesyonel mutfak deneyimi boyunca farklı pozisyonlarda görev alarak üretim, servis ve mutfak operasyonlarının farklı aşamalarında deneyim kazandı.</p>
+        <div class="profile-quote reveal">“Gastronomi benim için yalnızca yemek yapmak değil; kültürü, deneyimi ve hikâyeyi bir tabakta buluşturmaktır.”</div>
+        <ul class="profile-education reveal" aria-label="Eğitim">
+          <li>
+            <span class="profile-education-year">2024 – 2026</span>
+            <span><strong>Aşçılık</strong>Isparta Uygulamalı Bilimler Üniversitesi (ISUBÜ)</span>
+          </li>
+          <li>
+            <span class="profile-education-year">2021 – 2023</span>
+            <span><strong>Turizm Rehberliği</strong>Akdeniz Üniversitesi</span>
+          </li>
+        </ul>
+        <div class="reveal"><a href="iletisim.html" class="btn btn-outline">İletişime Geç →</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="experience-section">
+  <div class="container">
+    <div class="section-label reveal">Kariyer</div>
+    <h2 class="section-title reveal">Profesyonel <em>Deneyim</em></h2>
+    <div class="divider reveal"></div>
+
+    <div class="experience-list">
+      <article class="experience-card featured reveal">
+        <div class="experience-number">01</div>
+        <div>
+          <div class="experience-role">Executive Chef</div>
+          <div class="experience-company">Düven Hotel Cappadocia</div>
+          <div class="experience-location">Cappadocia · Nevşehir</div>
+          <p class="experience-note">Mutfak operasyonu, ekip koordinasyonu ve üretim süreçlerinde sorumluluk.</p>
+        </div>
+        
+      </article>
+
+      <article class="experience-card reveal">
+        <div class="experience-number">02</div>
+        <div>
+          <div class="experience-role">Demi Chef</div>
+          <div class="experience-company">Nana Cappadocia</div>
+          <div class="experience-location">Cappadocia · Nevşehir</div>
+          <p class="experience-note">Profesyonel mutfak üretimi ve servis süreçlerinde aktif görev.</p>
+        </div>
+      </article>
+
+      <article class="experience-card reveal">
+        <div class="experience-number">03</div>
+        <div>
+          <div class="experience-role">Chef de Partie</div>
+          <div class="experience-company">Elika Cave Suites Hilton Hotel</div>
+          <div class="experience-location">Cappadocia · Nevşehir</div>
+          <p class="experience-note">Mutfak istasyonu, hazırlık, üretim ve servis süreçlerinde profesyonel deneyim.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- REFERANSLAR -->
+<section class="references-section" aria-labelledby="referanslar-baslik">
+  <div class="container">
+    <div class="section-label reveal">Referanslar</div>
+    <h2 id="referanslar-baslik" class="section-title reveal">Birlikte Çalıştığım <em>Şefler</em></h2>
+    <div class="divider reveal"></div>
+    <p class="references-intro reveal">Elika Cave Suites Hilton Hotel mutfağında birlikte çalıştığım Executive Chef'ler.</p>
+
+    <div class="references-grid">
+      <article class="reference-card reveal">
+        
+        <div>
+          <div class="reference-name">Berat Gençaslan</div>
+          <div class="reference-role">Executive Chef</div>
+        </div>
+      </article>
+
+      <article class="reference-card reveal">
+        
+        <div>
+          <div class="reference-name">Hasan Öğüt</div>
+          <div class="reference-role">Executive Chef</div>
+        </div>
+      </article>
+
+      <article class="reference-card reveal">
+        
+        <div>
+          <div class="reference-name">Oğuzhan Taştan</div>
+          <div class="reference-role">Executive Chef</div>
+        </div>
+      </article>
+    </div>
+
+    <p class="references-note reveal">Referans iletişim bilgileri talep halinde paylaşılır. <a href="iletisim.html">Bana ulaşın</a>.</p>
+  </div>
+</section>
+
+<section class="profile-cta">
+  <div class="container">
+    <div class="section-label reveal" style="justify-content:center;">İletişim</div>
+    <h2 class="section-title reveal">Birlikte <em>Çalışalım</em></h2>
+    <p class="reveal">Profesyonel mutfak deneyimi, özel menü çalışmaları veya iş birlikleri için iletişime geçebilirsiniz.</p>
+    <a href="iletisim.html" class="btn btn-solid reveal">İletişime Geç →</a>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
